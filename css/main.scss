@@ -1,0 +1,163 @@
+---
+---
+@import "uno";
+@import "tables";
+@import "monokai";
+@import "publication";
+@import "catalogue";
+@import "variables";
+@import "project";
+
+/* Modifications */
+
+pre.highlight,
+.highlight pre {
+  padding: 10px;
+}
+
+pre.highlight code,
+.highlight pre code {
+  white-space: pre-wrap;
+}
+
+.btn,
+.navigation__item a {
+  margin: 5px 0;
+  white-space: nowrap;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.pagination a {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  font-weight: 450; /* 加粗链接 */
+  text-decoration: none;
+}
+
+.pagination .arrow {
+  flex: 1;
+  text-align: center;
+  color: #666; /* 灰色 */
+  text-decoration: none; /* 去掉下划线 */
+}
+
+.arrow-icon {
+  font-size: 24px; /* ✅ 箭头更大 */
+  font-weight: bold; /* 可选，加粗 */
+}
+
+.pagination a.left {
+  text-align: left;
+  color: #666;
+  font-weight: 450; /* 加粗链接 */
+}
+
+.pagination a.right {
+  text-align: right;
+  color: #666;
+  font-weight: 450; /* 加粗链接 */
+}
+
+.pagination a:hover {
+  color: $primary;
+}
+
+.pagination span {
+  flex: 1;
+}
+
+.pagination__page-number {
+  display: inline-block;
+  padding: 10px;
+}
+
+
+.categories a,
+.tags a {
+  border: 1px solid #e25440;
+  border-radius: 20px;
+  color: #e25440;
+  display: inline-block;
+  font-size: 12px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  text-shadow: none;
+  white-space: nowrap;
+}
+
+.post-meta__tags {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.footer {
+	display: block;
+	padding: 2em 0 .7em 0;
+	border-top: 1px solid #dddddd;
+	font-size: .7em;
+	color: #b3b3b3;
+    text-align: center;
+}
+
+.footer__copyright {
+	display: block;
+}
+	.footer__copyright a {
+		color: #a6a6a6;
+		text-decoration: underline; }
+		.footer__copyright a:hover {
+			color: #b9301c; }
+
+.user-image {
+  margin-bottom: 1.2em;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #fff;
+  border-radius:100%;
+}
+
+.publication img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto; /* 可选：居中显示 */
+}
+
+.btn {
+  font-size: 0.8rem;
+  font-family: $sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.5em 1.2em;
+  border-radius: 7px;
+  transition: all 0.2s ease-in-out;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.btn-outline-primary {
+  color: #4e4e4e;
+  border: 2px solid;
+  background-color: transparent;
+  margin: 1rem 0;
+}
+
+.btn-outline-primary:hover {
+  color: $primary;
+}
+
+@media screen and (max-width: 480px) {
+  .user-image {
+    width: 60%;
+    height: auto;
+    max-width: 100%;
+  }
+}

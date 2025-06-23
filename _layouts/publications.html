@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+{% assign pub_count = site.publications | size %}
+{% assign pub_index = 0 %}
+{% for pub in site.publications reversed %}
+  {% assign pub_index = pub_index | plus: 1 %}
+  {% if pub.url == page.url %}
+  {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="pagination">
+  {% if page.next.url %}
+  <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow arrow-icon">
+    ←
+  </a>
+  {% else %}
+  <span></span>
+  {% endif %}
+
+  <div class="arrow">
+    {{ pub_index }} of {{ pub_count }}
+  </div>
+
+  {% if page.previous.url %}
+  <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow arrow-icon">
+    →
+  </a>
+  {% else %}
+  <span></span>
+  {% endif %}
+</div>
+
+<div class="publication">
+
+  <h1 class="publication-title">{{ page.title }}</h1>
+  <h2 class="publication-subtitle">{{ page.subtitle }}</h2>
+
+  <div class="publication-info m-0">
+    Authors: {{ page.authors | join: ", " }}
+  </div>
+
+  <div class="publication-info">
+    Source: {{ page.source }}
+  </div>
+
+  <div class="publication-info">
+    Date: {{ page.date | date: "%B %d, %Y" }}
+  </div>
+
+  {% if page.DOI and page.DOI != "" %}
+  <div class="publication-info">
+    DOI/URL: <a href="{{ page.DOI_link }}" target="_blank"> {{ page.DOI }} </a>
+  </div>
+  {% endif %}
+
+  {{ content }}
+</div>

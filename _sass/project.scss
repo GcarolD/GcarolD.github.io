@@ -1,0 +1,80 @@
+.project-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  position: relative; /* ✅ 为 ::before 定位做准备 */
+}
+
+@media (max-width: 600px) { /* 调整这个数值以适应你的需求 */
+  .project-grid-container {
+    grid-template-columns: 1fr; /* 窄屏幕时使用单列布局 */
+  }
+}
+
+.project-grid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ccc;
+  border: 1px solid #ddd;
+  transition: transform 0.3s, background-color 0.3s;
+  border-radius: 10px; /* 可以保留容器圆角 */
+}
+
+.project-grid-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 留出 info 区域不加遮罩，如不需要可用 100% */
+  background-color: rgba(0, 0, 0, 0.15); /* 半透明黑色 */
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.project-grid-item:hover::after {
+  opacity: 1;
+}
+
+.project-grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0; /* ✅ 图片无圆角 */
+  display: block;
+}
+
+.project-grid-item:hover {
+  //transform: scale(1.02);
+  background-color: #eee;
+}
+
+
+.project-grid-info {
+  padding: 9px;
+  background: #fff; /* 可选背景色 */
+  font-size: 14px;
+  text-align: left;
+}
+
+.project-grid-info h6 {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.project-grid-info p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

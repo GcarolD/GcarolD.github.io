@@ -1,0 +1,21 @@
+---
+layout: default
+robots: noindex
+---
+
+<section id="about" style="display: none;">
+  <div class="about-section">
+    {% capture about_content %}
+      {% include_relative _pages/about.md %}
+    {% endcapture %}
+    {{ about_content | markdownify }}
+  </div>
+</section>
+
+<section id="publications">
+    {% include_relative _pages/publications_section.html %}
+</section>
+
+<section id="projects">
+  {% include_relative _pages/projects_section.html %}
+</section>
