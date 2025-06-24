@@ -1097,6 +1097,7 @@ pre {
 	padding: 8px 18px 9px 18px;
 	background: #e25440;
 	border-radius: 3px;
+	border: none;
 	text-align: center;
 	color: #FFF; }
 
@@ -1370,7 +1371,7 @@ nav {
 
 .navigation__item {
 	display: inline-block;
-	margin: 0 2px 0 0;
+	margin: 0 3px 0 3px;
 	line-height: 1em; }
 	.navigation__item a {
 		display: block;
@@ -1402,6 +1403,10 @@ nav {
 		.navigation--social a:hover {
   			color: #aaa;
 		}
+
+.icon-medium {
+  font-size: 1.5rem; /* 1rem一般是16px，1.5rem就是24px */
+}
 
 i {
 	font-family: 'entypo';
