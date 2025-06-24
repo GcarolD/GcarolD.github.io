@@ -12,7 +12,7 @@ image:
 ---
 
 
-{% include button.html link='/pdfs/2023-12-03-morphological-design-uniform-convex-polyhedra.pdf' text='View Full Paper' style='outline-primary' %}
+{% include button.html link='https://github.com/GcarolD/GcarolD.github.io/blob/main/_pdfs/2023-12-03-morphological-design-uniform-convex-polyhedra.pdf' text='View Full Paper' style='outline-primary' %}
 
 
 

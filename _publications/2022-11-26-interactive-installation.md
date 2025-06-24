@@ -12,7 +12,7 @@ image:
 ---
 
 
-{% include button.html link='/pdfs/2022-11-26-interactiive-installation.pdf' text='View Full Paper' style='outline-primary' %}
+{% include button.html link='https://github.com/GcarolD/GcarolD.github.io/blob/main/_pdfs/2022-11-26-interactive-installation.pdf' text='View Full Paper' style='outline-primary' %}
 
 
 
